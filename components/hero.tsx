@@ -14,7 +14,7 @@ export default function Hero({ isDark }: HeroProps) {
       }`}
     >
       <div
-        className="absolute inset-0 z-0 bg-[url('/background/4.png')] bg-cover bg-no-repeat bg-right-center sm:bg-center"
+        className="absolute inset-0 z-0 hidden sm:block bg-[url('/background/4.png')] bg-cover bg-no-repeat bg-right-center sm:bg-center"
         style={{
           transform: "scale(1.1)",
         }}
