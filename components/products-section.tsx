@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { ArrowRight } from "lucide-react"
-import { useState } from "react"
+import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 interface ProductsSectionProps {
-  isDark: boolean
+  isDark: boolean;
 }
 
 export default function ProductsSection({ isDark }: ProductsSectionProps) {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const products = [
     {
@@ -39,10 +39,14 @@ export default function ProductsSection({ isDark }: ProductsSectionProps) {
       description: "Enterprise security",
       image: "🛡️",
     },
-  ]
+  ];
 
   return (
-    <section className={`py-24 px-4 sm:px-6 lg:px-8 transition-smooth ${isDark ? "bg-black" : "bg-white"}`}>
+    <section
+      className={`py-24 px-4 sm:px-6 lg:px-8 transition-smooth ${
+        isDark ? "bg-black" : "bg-white"
+      }`}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2
@@ -52,7 +56,11 @@ export default function ProductsSection({ isDark }: ProductsSectionProps) {
           >
             Our Products
           </h2>
-          <p className={`text-lg max-w-2xl mx-auto transition-smooth ${isDark ? "text-white/60" : "text-maroon-700"}`}>
+          <p
+            className={`text-lg max-w-2xl mx-auto transition-smooth ${
+              isDark ? "text-white/60" : "text-maroon-700"
+            }`}
+          >
             Comprehensive payment solutions designed for every business need
           </p>
         </div>
@@ -63,16 +71,17 @@ export default function ProductsSection({ isDark }: ProductsSectionProps) {
               key={product.id}
               onMouseEnter={() => setHoveredCard(product.id)}
               onMouseLeave={() => setHoveredCard(null)}
-              className={`group relative rounded-3xl backdrop-blur-xl p-8 sm:p-12 overflow-hidden transition-all duration-300 cursor-pointer ${
-                isDark
-                  ? "bg-white/5 border border-white/10 hover:border-orange-500/50 hover:bg-white/10"
-                  : "bg-maroon-50 border border-maroon-200 hover:border-maroon-600 hover:bg-maroon-100"
-              }`}
+              className={`group relative rounded-3xl backdrop-blur-xl p-8 sm:p-12 overflow-hidden 
+    transition-all duration-300 cursor-pointer transform hover:-translate-y-2 ${
+      isDark
+        ? "bg-white/5 border border-white/10 hover:border-orange-500/50 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
+        : "bg-maroon-50 border border-maroon-200 hover:border-maroon-600 hover:bg-maroon-100 hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)]"
+    }`}
             >
               <div
                 className={`absolute inset-0 transition-all duration-300 ${
                   isDark
-                    ? "bg-gradient-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/5 group-hover:to-orange-500/10"
+                    ? "bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:to-blue-500/20"
                     : "bg-gradient-to-br from-maroon-500/0 to-maroon-500/0 group-hover:from-maroon-500/5 group-hover:to-maroon-500/10"
                 }`}
               ></div>
@@ -92,7 +101,11 @@ export default function ProductsSection({ isDark }: ProductsSectionProps) {
                 >
                   {product.title}
                 </h3>
-                <p className={`mb-8 transition-smooth ${isDark ? "text-white/60" : "text-maroon-700"}`}>
+                <p
+                  className={`mb-8 transition-smooth ${
+                    isDark ? "text-white/60" : "text-maroon-700"
+                  }`}
+                >
                   {product.description}
                 </p>
 
@@ -114,5 +127,5 @@ export default function ProductsSection({ isDark }: ProductsSectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }
