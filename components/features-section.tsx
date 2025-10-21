@@ -1,20 +1,30 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ChevronLeft, ChevronRight, Plus } from "lucide-react"
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Plus, Sparkles } from "lucide-react";
 
 interface FeaturesSectionProps {
-  isDark: boolean
+  isDark: boolean;
 }
 
 export default function FeaturesSection({ isDark }: FeaturesSectionProps) {
-  const [activeFeature, setActiveFeature] = useState(0)
+  const [activeFeature, setActiveFeature] = useState(0);
+const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  // Navigation functions
+  const nextFeature = () => {
+    setActiveFeature((prev) => (prev === features.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevFeature = () => {
+    setActiveFeature((prev) => (prev === 0 ? features.length - 1 : prev - 1));
+  };
 
   const features = [
     {
       id: 1,
       title: "Boost Approval Ratios",
-      description: "Increase transaction success rates with intelligent routing",
+      description:
+        "Increase transaction success rates with intelligent routing",
       icon: "📈",
     },
     {
@@ -41,7 +51,7 @@ export default function FeaturesSection({ isDark }: FeaturesSectionProps) {
       description: "Beautiful, conversion-focused payment experience",
       icon: "✨",
     },
-  ]
+  ];
 
   const sidebarItems = [
     "Smart Routing",
@@ -49,20 +59,29 @@ export default function FeaturesSection({ isDark }: FeaturesSectionProps) {
     "Retry with Open Banking",
     "Retry on Insufficient Funds",
     "3DS Cascading",
-  ]
-
+  ];
   return (
-    <section
-      className={`py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden transition-smooth ${
-        isDark ? "bg-black" : "bg-white"
-      }`}
+   <section
+      className={`py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden transition-smooth
+        ${isDark ? "bg-black" : "bg-white"}`}
     >
+      {/* Enhanced Background Effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 w-full h-full bg-[url('/grid-pattern.svg')] bg-repeat opacity-5" />
+        <div className={`absolute -top-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-[100px] animate-blob`} />
+        <div className={`absolute -bottom-40 -right-40 w-80 h-80 bg-orange-500 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000`} />
+        <div className={`absolute top-40 right-40 w-80 h-80 ${isDark ? 'bg-blue-500' : 'bg-[#800000]'} rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000`} />
+      </div>
+      {/* Background gradient */}
       <div
-        className={`absolute inset-0 bg-gradient-to-b transition-smooth ${
-          isDark ? "from-orange-500/5 to-transparent" : "from-maroon-400/5 to-transparent"
+        className={`absolute inset-0 transition-smooth ${
+          isDark
+            ? "bg-gradient-to-br from-orange-500/10 via-black/50 to-blue-500/10"
+            : "bg-gradient-to-br from-[#800000]/10 via-white/50 to-[#800000]/5"
         }`}
-      ></div>
+      />
 
+      {/* Content container */}
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2
@@ -72,131 +91,161 @@ export default function FeaturesSection({ isDark }: FeaturesSectionProps) {
           >
             Powerful Features
           </h2>
-          <p className={`text-lg max-w-2xl mx-auto transition-smooth ${isDark ? "text-white/60" : "text-maroon-700"}`}>
+          <p
+            className={`text-lg max-w-2xl mx-auto transition-smooth ${
+              isDark ? "text-white/60" : "text-maroon-700"
+            }`}
+          >
             Everything you need to succeed in modern payment processing
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Sidebar */}
+          {/* Enhanced Sidebar */}
           <div className="lg:col-span-1">
             <div
-              className={`rounded-2xl backdrop-blur-xl p-6 h-full transition-smooth ${
-                isDark ? "bg-white/5 border border-white/10" : "bg-maroon-50 border border-maroon-200"
+              className={`rounded-3xl backdrop-blur-xl p-8 h-full transition-all duration-500
+                shadow-lg hover:shadow-2xl transform hover:-translate-y-1 ${
+                isDark
+                  ? "bg-gradient-to-br from-white/10 to-white/5 border border-white/10"
+                  : "bg-gradient-to-br from-white/80 to-white/40 border border-[#800000]/20"
               }`}
             >
               <h3
-                className={`text-sm font-semibold uppercase tracking-wider mb-6 transition-smooth ${
-                  isDark ? "text-white/60" : "text-maroon-600"
+                className={`text-sm font-semibold uppercase tracking-wider mb-8 flex items-center gap-2 ${
+                  isDark ? "text-white/80" : "text-[#800000]"
                 }`}
               >
-                Features
+                <Sparkles className="w-4 h-4" />
+                Features Explorer
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {sidebarItems.map((item, idx) => (
                   <button
                     key={idx}
                     onClick={() => setActiveFeature(idx)}
-                    className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 text-sm font-medium ${
+                    className={`w-full text-left px-6 py-4 rounded-2xl transition-all duration-500 
+                      text-sm font-medium relative overflow-hidden group ${
                       activeFeature === idx
                         ? isDark
-                          ? "bg-orange-500/20 text-orange-400 border border-orange-500/30"
-                          : "bg-maroon-200 text-maroon-900 border border-maroon-400"
+                          ? "bg-gradient-to-r from-orange-500/30 to-purple-500/30 text-white border border-orange-500/50"
+                          : "bg-gradient-to-r from-[#800000]/20 to-[#800000]/10 text-[#800000] border border-[#800000]"
                         : isDark
-                          ? "text-white/60 hover:text-white hover:bg-white/5"
-                          : "text-maroon-700 hover:text-maroon-900 hover:bg-maroon-100"
+                        ? "text-white/60 hover:text-white hover:bg-white/5"
+                        : "text-[#800000]/70 hover:text-[#800000] hover:bg-[#800000]/5"
                     }`}
                   >
-                    {item}
+                    <div className="relative z-10">{item}</div>
+                    <div
+                      className={`absolute inset-0 transition-transform duration-500 
+                        ${activeFeature === idx ? "scale-100" : "scale-0"} 
+                        ${isDark ? "bg-orange-500/10" : "bg-[#800000]/5"}`}
+                    />
                   </button>
                 ))}
               </div>
             </div>
           </div>
 
+
           {/* Feature Cards Carousel */}
-          <div className="lg:col-span-3">
+         <div className="lg:col-span-3">
             <div
-              className={`rounded-2xl backdrop-blur-xl p-8 sm:p-12 transition-smooth ${
-                isDark ? "bg-white/5 border border-white/10" : "bg-maroon-50 border border-maroon-200"
+              className={`rounded-3xl backdrop-blur-xl p-8 transition-all duration-500
+                shadow-2xl relative overflow-hidden ${
+                isDark
+                  ? "bg-gradient-to-br from-white/10 to-transparent border border-white/10"
+                  : "bg-gradient-to-br from-white/90 to-white/60 border border-[#800000]/20"
               }`}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                 {features.map((feature, idx) => (
                   <div
                     key={feature.id}
-                    className={`group relative rounded-xl p-6 transition-all duration-300 cursor-pointer ${
-                      activeFeature === idx
-                        ? isDark
-                          ? "bg-orange-500/20 border border-orange-500/50"
-                          : "bg-maroon-200 border border-maroon-400"
-                        : isDark
+                    onMouseEnter={() => setHoveredCard(idx)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                    className={`group relative rounded-2xl p-8 transition-all duration-500 
+                      transform hover:-translate-y-2 hover:shadow-2xl
+                      ${
+                        activeFeature === idx
+                          ? isDark
+                            ? "bg-gradient-to-br from-orange-500/20 to-purple-500/20 border border-orange-500/50"
+                            : "bg-gradient-to-br from-[#800000]/15 to-[#800000]/5 border border-[#800000]"
+                          : isDark
                           ? "bg-white/5 border border-white/10 hover:border-white/20"
-                          : "bg-white border border-maroon-200 hover:border-maroon-400"
-                    }`}
+                          : "bg-white/60 border border-[#800000]/20 hover:border-[#800000]"
+                      }`}
                   >
-                    <div className="text-3xl mb-3">{feature.icon}</div>
+                    <div className={`text-4xl mb-4 transition-transform duration-500 ${hoveredCard === idx ? 'scale-110' : 'scale-100'}`}>
+                      {feature.icon}
+                    </div>
                     <h4
-                      className={`text-lg font-bold mb-2 transition-smooth ${
-                        isDark ? "text-white" : "text-maroon-900"
+                      className={`text-xl font-bold mb-3 ${
+                        isDark ? "text-white" : "text-[#800000]"
                       }`}
                     >
                       {feature.title}
                     </h4>
-                    <p className={`text-sm transition-smooth ${isDark ? "text-white/60" : "text-maroon-700"}`}>
+                    <p
+                      className={`text-base ${
+                        isDark ? "text-white/60" : "text-[#800000]/70"
+                      }`}
+                    >
                       {feature.description}
                     </p>
                     <button
-                      className={`absolute bottom-4 right-4 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 ${
-                        isDark ? "bg-white/10 hover:bg-orange-500" : "bg-maroon-100 hover:bg-maroon-600"
-                      }`}
-                    >
-                      <Plus
-                        className={`w-4 h-4 transition-smooth ${
-                          isDark ? "text-white" : "text-maroon-900 group-hover:text-white"
+                      className={`absolute bottom-4 right-4 p-3 rounded-full 
+                        opacity-0 group-hover:opacity-100 transition-all duration-500 
+                        transform hover:scale-110 ${
+                          isDark
+                            ? "bg-gradient-to-r from-orange-500 to-purple-500 text-white"
+                            : "bg-gradient-to-r from-[#800000] to-[#600000] text-white"
                         }`}
-                      />
+                    >
+                      <Plus className="w-5 h-5" />
                     </button>
                   </div>
                 ))}
               </div>
 
               {/* Navigation */}
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mt-8">
                 <button
-                  className={`p-2 rounded-lg transition-smooth ${
+                  onClick={prevFeature}
+                  className={`p-3 rounded-full transition-all duration-300 transform hover:scale-110 ${
                     isDark
-                      ? "bg-white/10 hover:bg-white/20 text-white"
-                      : "bg-maroon-100 hover:bg-maroon-200 text-maroon-900"
+                      ? "bg-white/10 hover:bg-orange-500/50 text-white"
+                      : "bg-[#800000]/10 hover:bg-[#800000] hover:text-white text-[#800000]"
                   }`}
                 >
-                  <ChevronLeft className="w-5 h-5" />
+                  <ChevronLeft className="w-6 h-6" />
                 </button>
                 <div className="flex gap-2">
                   {features.map((_, idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveFeature(idx)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      className={`w-2 h-2 rounded-full transition-all duration-500 ${
                         activeFeature === idx
                           ? isDark
                             ? "bg-orange-500 w-8"
-                            : "bg-maroon-600 w-8"
+                            : "bg-[#800000] w-8"
                           : isDark
-                            ? "bg-white/30"
-                            : "bg-maroon-300"
+                          ? "bg-white/30 hover:bg-white/50"
+                          : "bg-[#800000]/30 hover:bg-[#800000]/50"
                       }`}
                     />
                   ))}
                 </div>
                 <button
-                  className={`p-2 rounded-lg transition-smooth ${
+                  onClick={nextFeature}
+                  className={`p-3 rounded-full transition-all duration-300 transform hover:scale-110 ${
                     isDark
-                      ? "bg-white/10 hover:bg-white/20 text-white"
-                      : "bg-maroon-100 hover:bg-maroon-200 text-maroon-900"
+                      ? "bg-white/10 hover:bg-orange-500/50 text-white"
+                      : "bg-[#800000]/10 hover:bg-[#800000] hover:text-white text-[#800000]"
                   }`}
                 >
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="w-6 h-6" />
                 </button>
               </div>
             </div>
@@ -204,5 +253,5 @@ export default function FeaturesSection({ isDark }: FeaturesSectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }
