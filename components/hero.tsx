@@ -14,10 +14,11 @@ export default function Hero({ isDark }: HeroProps) {
       }`}
     >
       <div
-        className="absolute inset-0 z-0 hidden sm:block bg-[url('/background/4.png')] bg-cover bg-no-repeat bg-right-center sm:bg-center"
-        style={{
-          transform: "scale(1.1)",
-        }}
+        className={`absolute inset-0 z-0 hidden sm:block ${
+          isDark 
+            ? "bg-[url('/background/5.jpg')] bg-cover bg-no-repeat bg-right-center sm:bg-center" 
+            : "bg-[url('/background/3.jpg')] bg-cover bg-no-repeat bg-right-center sm:bg-center"
+        }`}
       />
       <div
         className={`absolute inset-0 ${isDark ? "bg-black/60" : "bg-white/40"}`}
@@ -33,7 +34,7 @@ export default function Hero({ isDark }: HeroProps) {
             }`}
           >
             <span
-              className={`text-sm font-medium ${
+              className={`text-sm font-medium font-orbitron ${
                 isDark ? "text-orange-400" : "text-maroon-600"
               }`}
             >
@@ -41,48 +42,46 @@ export default function Hero({ isDark }: HeroProps) {
             </span>
           </div>
           <h1
-            className={`text-6xl sm:text-7xl lg:text-8xl font-bold mb-8 leading-tight transition-smooth ${
-              isDark ? "text-white" : "text-maroon-900"
+            className={`text-6xl sm:text-7xl lg:text-6xl font-bold mb-8 leading-relaxed font-orbitron transition-smooth ${
+              isDark ? "text-white" : "text-[#000000]"
             }`}
           >
             Payment Solutions
             <br />
             <span
-              className={`bg-clip-text text-transparent ${
+              className={`bg-clip-text text-transparent font-orbitron leading-tight ${
                 isDark
-                  ? "bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600"
-                  : "bg-gradient-to-r from-maroon-600 via-maroon-700 to-maroon-800"
+                  ? "bg-gradient-to-r from-[#fd3b02] via-[#fe7751] to-[#fd3b02]"
+                  : "bg-gradient-to-r from-[#fd3b02] via-[#fe7751] to-[#fd3b02]"
               }`}
             >
               Made Simple
             </span>
           </h1>
           <p
-            className={`text-lg sm:text-xl max-w-3xl mx-auto mb-12 leading-relaxed transition-smooth ${
-              isDark ? "text-white/60" : "text-maroon-700"
+            className={`text-lg sm:text-xl max-w-3xl mx-auto mb-12 leading-relaxed font-poppins transition-smooth ${
+              isDark ? "text-white/60" : "text-[#5e5e5d]"
             }`}
           >
-            Payland delivers secure, fast, and elegant payment processing for
-            modern businesses. Process transactions globally with confidence and
-            ease.
+            Payland delivers secure, fast, and reliable payment processing solutions for modern businesses.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col rounded-full sm:flex-row gap-4 justify-center">
             <button
-              className={`px-8 py-4 font-semibold rounded-full transition-smooth flex items-center justify-center gap-2 group shadow-lg ${
+              className={`px-8 py-4 font-semibold  transition-smooth flex items-center justify-center gap-2 group shadow-lg font-opensans ${
                 isDark
-                  ? "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white hover:shadow-orange-500/50"
-                  : "bg-gradient-to-r from-maroon-600 to-maroon-700 hover:from-maroon-700 hover:to-maroon-800 text-white hover:shadow-maroon-500/50"
+                  ? "bg-gradient-to-r from-[#fd3b02] to-[#fe7751]  hover:from-[#fe7751] hover:to-[#fd3b02] text-white hover:shadow-[#fd3b02]/50"
+                  : "bg-gradient-to-r from-[#fd3b02] via-gray-200 to-[#fe7751] ring-1 border-radius-[50px 0px 50px 0px] hover:from-[#fe7751] hover:to-[#fd3b02] text-black hover:shadow-[#fd3b02]/50"
               }`}
             >
               Get Started
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-smooth" />
             </button>
             <button
-              className={`px-8 py-4 rounded-full font-semibold transition-smooth ${
+              className={`px-8 py-4 rounded-full font-semibold transition-smooth font-poppins ${
                 isDark
                   ? "bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/30 text-white"
-                  : "bg-maroon-50 border border-maroon-300 hover:bg-maroon-100 hover:border-maroon-400 text-maroon-900"
+                  : "bg-white/80 border border-[#5e5e5d]/20 hover:bg-white/90 hover:border-[#5e5e5d]/40 text-[#000000]"
               }`}
             >
               Watch Demo
@@ -94,21 +93,21 @@ export default function Hero({ isDark }: HeroProps) {
           className={`mt-24 max-w-5xl mx-auto rounded-3xl backdrop-blur-xl p-12 sm:p-16 shadow-2xl transition-smooth ${
             isDark
               ? "bg-white/5 border border-white/10"
-              : "bg-maroon-50/50 border border-maroon-200"
+              : "bg-gray-200/5 border border-[#5e5e5d]/20"
           }`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 font-orbitron">
             <div className="text-center">
               <div
-                className={`text-4xl sm:text-5xl font-bold mb-3 transition-smooth ${
-                  isDark ? "text-orange-400" : "text-maroon-600"
+                className={`text-4xl sm:text-5xl font-bold mb-3 transition-smooth font-opensans ${
+                  isDark ? "text-[#fd3b02]" : "text-[#fd3b02]"
                 }`}
               >
-                $5B+
+                $50M+
               </div>
               <p
-                className={`text-sm font-medium transition-smooth ${
-                  isDark ? "text-white/60" : "text-maroon-700"
+                className={`text-sm font-medium transition-smooth font-opensans ${
+                  isDark ? "text-white/60" : "text-[#5e5e5d]"
                 }`}
               >
                 Transactions Processed
@@ -116,19 +115,19 @@ export default function Hero({ isDark }: HeroProps) {
             </div>
             <div
               className={`text-center border-l border-r transition-smooth ${
-                isDark ? "border-white/10" : "border-maroon-200"
+                isDark ? "border-white/10" : "border-[#5e5e5d]/20"
               }`}
             >
               <div
                 className={`text-4xl sm:text-5xl font-bold mb-3 transition-smooth ${
-                  isDark ? "text-orange-400" : "text-maroon-600"
+                  isDark ? "text-[#fe7751]" : "text-[#fe7751]"
                 }`}
               >
                 180+
               </div>
               <p
-                className={`text-sm font-medium transition-smooth ${
-                  isDark ? "text-white/60" : "text-maroon-700"
+                className={`text-sm font-medium transition-smooth font-poppins ${
+                  isDark ? "text-white/60" : "text-[#5e5e5d]"
                 }`}
               >
                 Countries Supported
@@ -136,15 +135,15 @@ export default function Hero({ isDark }: HeroProps) {
             </div>
             <div className="text-center">
               <div
-                className={`text-4xl sm:text-5xl font-bold mb-3 transition-smooth ${
-                  isDark ? "text-orange-400" : "text-maroon-600"
+                className={`text-4xl sm:text-5xl font-bold mb-3 transition-smooth font-poppins ${
+                  isDark ? "text-[#fd3b02]" : "text-[#fd3b02]"
                 }`}
               >
                 99.99%
               </div>
               <p
-                className={`text-sm font-medium transition-smooth ${
-                  isDark ? "text-white/60" : "text-maroon-700"
+                className={`text-sm font-medium transition-smooth font-poppins ${
+                  isDark ? "text-white/60" : "text-[#5e5e5d]"
                 }`}
               >
                 Uptime Guarantee

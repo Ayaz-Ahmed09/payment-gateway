@@ -1,19 +1,32 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { Orbit } from "next/font/google";
+import { Orbitron, Poppins, Open_Sans } from "next/font/google";
 // @ts-ignore: allow importing global CSS for Next.js layout
 import "./globals.css";
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
-const _orbit = Orbit({
+
+const orbitron = Orbitron({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-orbit",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-orbitron",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-open-sans",
+  display: "swap",
 });
 export const metadata: Metadata = {
-  title: "PayFlow - Modern Payment Gateway",
+  title: "Payland - Modern Payment Gateway",
   description: "Secure, fast, and elegant payment processing",
   generator: "Next.js",
 };
@@ -26,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${_geist.className} ${_orbit.variable}   font-sans antialiased`}
+        className={`${poppins.className} ${orbitron.variable} ${poppins.variable} ${openSans.variable} antialiased`}
       >
         {children}
         <Analytics />
