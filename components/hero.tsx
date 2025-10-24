@@ -15,8 +15,8 @@ export default function Hero({ isDark }: HeroProps) {
     >
       <div
         className={`absolute inset-0 z-0 hidden sm:block ${
-          isDark 
-            ? "bg-[url('/background/5.jpg')] bg-cover bg-no-repeat bg-right-center sm:bg-center" 
+          isDark
+            ? "bg-[url('/background/5.jpg')] bg-cover bg-no-repeat bg-right-center sm:bg-center"
             : "bg-[url('/background/3.jpg')] bg-cover bg-no-repeat bg-right-center sm:bg-center"
         }`}
       />
@@ -63,7 +63,8 @@ export default function Hero({ isDark }: HeroProps) {
               isDark ? "text-white/60" : "text-[#5e5e5d]"
             }`}
           >
-            Payland delivers secure, fast, and reliable payment processing solutions for modern businesses.
+            Payland delivers secure, fast, and reliable payment processing
+            solutions for modern businesses.
           </p>
 
           <div className="flex flex-col rounded-full sm:flex-row gap-4 justify-center">
@@ -99,14 +100,14 @@ export default function Hero({ isDark }: HeroProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 font-orbitron">
             <div className="text-center">
               <div
-                className={`text-4xl sm:text-5xl font-bold mb-3 transition-smooth font-opensans ${
+                className={`text-4xl sm:text-5xl font-bold mb-3 transition-smooth font-openSans ${
                   isDark ? "text-[#fd3b02]" : "text-[#fd3b02]"
                 }`}
               >
                 $50M+
               </div>
               <p
-                className={`text-sm font-medium transition-smooth font-opensans ${
+                className={`text-sm font-medium transition-smooth font-openSans ${
                   isDark ? "text-white/60" : "text-[#5e5e5d]"
                 }`}
               >
