@@ -99,31 +99,13 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
   return (
    <section
       className={`py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden transition-smooth
-        ${isDark ? "bg-black" : "bg-[#f8f8f8]"}`}
+       ${isDark ? 'bg-black/50' : 'bg-white/50'}`}
     >
-      {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 w-full h-full bg-[url('/grid-pattern.svg')] bg-repeat opacity-5" />
-        <div className={`absolute -top-40 -left-40 w-80 h-80 bg-[#fe7751] rounded-full mix-blend-multiply filter blur-[100px] animate-blob`} />
-        <div className={`absolute -bottom-40 -right-40 w-80 h-80 bg-[#fd3b02] rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000`} />
-        <div className={`absolute top-40 right-40 w-80 h-80 ${isDark ? 'bg-[#5e5e5d]' : 'bg-[#000000]'} rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000`} />
-      </div>
-      {/* Background gradient */}
-      <div
-        className={`absolute inset-0 transition-smooth ${
-          isDark
-            ? "bg-gradient-to-br from-[#fd3b02]/10 via-black/50 to-[#fe7751]/10"
-            : "bg-gradient-to-br from-[#fe7751]/8 via-[#f8f8f8]/50 to-[#fd3b02]/5"
-        }`}
-      />
+    
+     
       
       {/* Very subtle edge gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className={`absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-${isDark ? 'white/2' : 'black/2'} to-transparent`} />
-        <div className={`absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-${isDark ? 'white/2' : 'black/2'} to-transparent`} />
-        <div className={`absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-${isDark ? 'white/2' : 'black/2'} to-transparent`} />
-        <div className={`absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-${isDark ? 'white/2' : 'black/2'} to-transparent`} />
-      </div>
+     
 
       {/* Content container */}
       <div className="max-w-7xl mx-auto relative z-10">
@@ -148,12 +130,8 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
           {/* Enhanced Sidebar */}
           <div className="lg:col-span-1">
             <div
-              className={`rounded-3xl backdrop-blur-xl p-8 h-full transition-all duration-500
-                shadow-lg hover:shadow-2xl transform hover:-translate-y-1 overflow-hidden ${
-                isDark
-                  ? "bg-gradient-to-br from-white/10 to-white/5"
-                  : "bg-gradient-to-br from-white/90 to-white/70"
-              }`}
+              className={`rounded-3xl backdrop-blur-xl p-8 h-full 
+         shadow-xl shadow-orange-400 overflow-hidden`}
             >
               <h3
                 className={`text-sm font-semibold uppercase tracking-wider mb-8 flex items-center gap-2 ${
@@ -168,15 +146,13 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                   <button
                     key={idx}
                     onClick={() => setActiveFeature(idx)}
-                    className={`w-full text-left px-4 py-4 rounded-2xl transition-all duration-500 
-                      relative overflow-hidden group border-2 ${
+                    className={`w-full text-left px-4 py-4 rounded-2xl relative overflow-hidden
+                    ring-2 ring-orange-300 hover:ring-orange-500 ${
                       activeFeature === idx
                         ? isDark
-                          ? "bg-gradient-to-r from-[#fd3b02]/30 to-[#fe7751]/30 text-white border-[#fd3b02]/50"
-                          : "bg-gradient-to-r from-[#fd3b02]/20 to-[#fe7751]/15 text-[#000000] border-[#fd3b02]"
-                        : isDark
-                        ? "text-white/60 hover:text-white hover:bg-white/5 border-white/20 hover:border-white/40"
-                        : "text-[#5e5e5d] hover:text-[#000000] hover:bg-[#fe7751]/10 border-black/20 hover:border-black/40"
+                          ? " text-white shadow-xs shadow-orange 400 group-hover:[shadow-xl, shadow-orange-500] translate-3d"
+                          : "text-white/60   shadow-2xl shadow-orange-500 translate-3d"
+                        : "text-[#5e5e5d]   shadow-2xl  group-hover:[bg-gradient-to-r from-orange-300 via-white to-orange-600]"
                     }`}
                   >
                     <div className="relative z-10 flex items-center gap-3">
@@ -190,11 +166,7 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                         </div>
                       </div>
                     </div>
-                    <div
-                      className={`absolute inset-0 transition-transform duration-500 
-                        ${activeFeature === idx ? "scale-100" : "scale-0"} 
-                        ${isDark ? "bg-[#fd3b02]/10" : "bg-[#fe7751]/8"}`}
-                    />
+                    
                   </button>
                 ))}
               </div>
@@ -205,12 +177,8 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
           {/* Feature Cards Carousel */}
          <div className="lg:col-span-3">
             <div
-              className={`rounded-3xl backdrop-blur-xl p-8 transition-all duration-500
-                shadow-2xl relative overflow-hidden ${
-                isDark
-                  ? "bg-gradient-to-br from-white/10 to-transparent"
-                  : "bg-gradient-to-br from-white/95 to-white/80"
-              }`}
+              className={`rounded-3xl backdrop-blur-xl p-8 
+                shadow-xl relative overflow-hidden `}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                 {features.map((feature, idx) => (
@@ -218,41 +186,30 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                     key={feature.id}
                     onMouseEnter={() => setHoveredCard(idx)}
                     onMouseLeave={() => setHoveredCard(null)}
-                    className={`group relative rounded-2xl p-8 transition-all duration-500 
-                      transform hover:-translate-y-2 hover:shadow-2xl overflow-hidden
+                    className={` relative rounded-2xl p-8 
+                           shadow-xs hover:-translate-y-4  shadow-orange-300 hover:shadow-orange-500  overflow-hidden
                       ${
                         activeFeature === idx
-                          ? isDark
-                            ? "bg-gradient-to-br from-[#fd3b02]/20 to-[#fe7751]/20 border-2 border-white/50"
-                            : "bg-gradient-to-br from-[#fd3b02]/15 to-[#fe7751]/10 border-2 border-black/50"
-                          : isDark
-                          ? "bg-gradient-to-br from-white/8 to-white/3 border-2 border-white/30 hover:border-white/60 hover:bg-gradient-to-br hover:from-[#fd3b02]/15 hover:to-[#fe7751]/10"
-                          : "bg-gradient-to-br from-white/90 to-white/70 border-2 border-black/30 hover:border-black/60 hover:bg-gradient-to-br hover:from-[#fe7751]/20 hover:to-[#fd3b02]/15"
+                          ? "group-hover:[bg-orange-500] transform-3d "
+                          : "group-hover:[bg-orange-500] transform-3d group-hover:[shadow-2xl , shadow-orange-500]:"
                       }`}
                   >
                     {/* Premium inner glow effect */}
-                    <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
-                      hoveredCard === idx 
-                        ? isDark 
-                          ? "bg-black text-white" 
-                          : "bg-white text-black"
-                        : "opacity-0"
-                    }`} />
                     
                     {/* Content */}
-                    <div className="relative ">
-                      <div className={`text-4xl mb-4 transition-transform duration-500 ${hoveredCard === idx ? 'scale-110' : 'scale-100'}`}>
+                    <div className="relative e">
+                      <div className={`text-4xl mb-4 abs `}>
                         {feature.icon}
                       </div>
                       <h4
-                        className={`text-xl font-bold mb-3 transition-colors duration-300 ${
+                        className={`text-xl font-bold mb-3  ${
                           isDark ? "text-white" : "text-[#000000]"
-                        } ${hoveredCard === idx ? (isDark ? "text-[#fe7751]" : "text-[#fd3b02]") : ""}`}
+                        }`}
                       >
                         {feature.title}
                       </h4>
                       <p
-                        className={`text-base transition-colors duration-300 ${
+                        className={`text-base ${
                           isDark ? "text-white/60" : "text-[#5e5e5d]"
                         } ${hoveredCard === idx ? (isDark ? "text-white/80" : "text-[#5e5e5d]/90") : ""}`}
                       >
@@ -261,14 +218,14 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                     </div>
                     
                     {/* Sliding Feature Details Panel */}
-                    <div className={`absolute inset-0 rounded-2xl transition-all duration-500 transform ${
+                    <div className={`absolute inset-0 rounded-2xl transition-all duration-500 transition-smooth transform ${
                       hoveredButton === idx 
                         ? "translate-x-0 opacity-100" 
-                        : "translate-x-full opacity-0"
+                        : "translate-x-full opacity-0 p-8"
                     } ${
                       isDark 
-                        ? "bg-[#fd3b02]"
-                        : "bg-[#fd3b02]"
+                        ? "bg-black"
+                        : "bg-black"
                     }`}>
                       <div className="p-6 h-full flex flex-col justify-center">
                         <div className="text-3xl mb-4 text-center">✨</div>
@@ -296,14 +253,13 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                       onMouseEnter={() => setHoveredButton(idx)}
                       onMouseLeave={() => setHoveredButton(null)}
                       className={`absolute bottom-4 right-4 p-3 rounded-full 
-                        opacity-0 group-hover:opacity-100 transition-all duration-500 
-                        transform hover:scale-110 shadow-lg backdrop-blur-sm z-20 ${
+                        opacity-100   shadow-lg backdrop-blur-sm z-50 ${
                           isDark
-                            ? "bg-gradient-to-r from-[#fd3b02]/80 via-white to-[#fe7751]/80 text-white border border-white/30"
-                            : "bg-gradient-to-r from-[#fd3b02]/80 via-black to-[#fe7751]/80 text-white border border-white/30"
+                            ? "bg-orange-500 text-black ring-2 ring-white"
+                            : "bg-black text-white ring-2 ring-orange-500"
                         }`}
                     >
-                      <Plus className="w-5 h-5" />
+                      <Plus className="w-5 h-5 " />
                     </button>
                   </div>
                 ))}
@@ -333,7 +289,7 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                             : "bg-[#fd3b02] w-8"
                           : isDark
                           ? "bg-white/30 hover:bg-white/50"
-                          : "bg-[#5e5e5d]/40 hover:bg-[#fe7751]/60"
+                          : "bg-transparent hover:bg-orange-300"
                       }`}
                     />
                   ))}
@@ -342,7 +298,7 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                   onClick={nextFeature}
                   className={`p-3 rounded-full transition-all duration-300 transform hover:scale-110 ${
                     isDark
-                      ? "bg-white/10 hover:bg-[#fd3b02]/50 text-white"
+                      ? "bg-orange-100 hover:bg-orange-300 text-white/50"
                       : "bg-[#fe7751]/20 hover:bg-[#fd3b02] hover:text-white text-[#000000]"
                   }`}
                 >

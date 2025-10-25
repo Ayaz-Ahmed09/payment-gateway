@@ -30,12 +30,12 @@ const statsCards = [
   },
   {
     icon: <Globe className="w-8 h-8" />,
-    value: "150+",
+    value: "120+",
     label: "Countries",
   },
   {
     icon: <Wallet className="w-8 h-8" />,
-    value: "$25",
+    value: "$25M+",
     label: "Transactions",
   },
 ]

@@ -20,7 +20,7 @@ export default function Footer({ isDark }: FooterProps) {
             <div className="flex items-center gap-3 mb-6">
              <Image src={isDark ? "/logo12.png" : "/logo1.png"} alt="Payland Logo" width={40} height={40} />
               <span className={`font-bold text-lg transition-smooth ${isDark ? "text-white" : "text-maroon-900"}`}>
-                <span className="text-orange-500">Pay</span>land
+                <span className="text-orange-500">Pay</span>Land
               </span>
             </div>
             <p className={`text-sm leading-relaxed justify-center transition-smooth ${isDark ? "text-white/60" : "text-maroon-700"}`}>

@@ -25,13 +25,13 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-   <Image src="/logo12.png" alt="Payland Logo" width={50} height={50} />
+           <Image src="/logo12.png" alt="Payland Logo" width={40} height={40} loading="lazy" />
             <span
               className={`font-bold text-xl hidden sm:inline transition-smooth ${
                 isDark ? "text-white" : "text-maroon-900"
               }`}
             >
-              <span className="text-orange-500">Pay</span>land
+              <span className="text-orange-500">Pay</span>Land
             </span>
           </div>
 
@@ -181,7 +181,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
                   },
                   {
                     label: "ENTERPRISE SECURITY",
-                    title: "Payland Safe",
+                    title: "PayLand Safe",
                     description: "Enterprise-grade security",
                     image: "/security-encryption.jpg",
                   },
