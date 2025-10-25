@@ -25,7 +25,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-           <Image src="/logo12.png" alt="Payland Logo" width={40} height={40} loading="lazy" />
+           <Image src="/logo12.png" alt="PayLand Logo" width={40} height={40} loading="lazy" />
             <span
               className={`font-bold text-xl hidden sm:inline transition-smooth ${
                 isDark ? "text-white" : "text-maroon-900"
@@ -43,25 +43,25 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               items={[
                 {
                   label: "OUR FLAGSHIP PRODUCT",
-                  title: "Payland Pro",
+                  title: "PayLand Pro",
                   description: "Complete payment solution for businesses",
                   image: "/payment-gateway-dashboard.png",
                 },
                 {
                   label: "SUPERCHARGED PAYMENTS",
-                  title: "Payland Direct",
+                  title: "PayLand Direct",
                   description: "API-first payment platform",
                   image: "/payment-processing-technology.jpg",
                 },
                 {
-                  label: "PAYLAND POWERED",
+                  label: "PayLand POWERED",
                   title: "Hosted Fields",
                   description: "Secure payment forms",
                   image: "/secure-payment-form.jpg",
                 },
                 {
                   label: "ENTERPRISE SECURITY",
-                  title: "Payland Safe",
+                  title: "PayLand Safe",
                   description: "Enterprise-grade security",
                   image: "/security-encryption.jpgHeader",
                 },
@@ -163,18 +163,18 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
                 items={[
                   {
                     label: "OUR FLAGSHIP PRODUCT",
-                    title: "Payland Pro",
+                    title: "PayLand Pro",
                     description: "Complete payment solution for businesses",
                     image: "/payment-gateway-dashboard.png",
                   },
                   {
                     label: "SUPERCHARGED PAYMENTS",
-                    title: "Payland Direct",
+                    title: "PayLand Direct",
                     description: "API-first payment platform",
                     image: "/payment-processing-technology.jpg",
                   },
                   {
-                    label: "PAYLAND POWERED",
+                    label: "PayLand POWERED",
                     title: "Hosted Fields",
                     description: "Secure payment forms",
                     image: "/secure-payment-form.jpg",

@@ -18,7 +18,7 @@ export default function Footer({ isDark }: FooterProps) {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-             <Image src={isDark ? "/logo12.png" : "/logo1.png"} alt="Payland Logo" width={40} height={40} />
+             <Image src={isDark ? "/logo12.png" : "/logo1.png"} alt="PayLand Logo" width={40} height={40} />
               <span className={`font-bold text-lg transition-smooth ${isDark ? "text-white" : "text-maroon-900"}`}>
                 <span className="text-orange-500">Pay</span>Land
               </span>
@@ -45,7 +45,7 @@ export default function Footer({ isDark }: FooterProps) {
                     isDark ? "text-white/60 hover:text-orange-400" : "text-maroon-700 hover:text-maroon-900"
                   }`}
                 >
-                  Payland Pro
+                  PayLand Pro
                 </a>
               </li>
               <li>
@@ -75,7 +75,7 @@ export default function Footer({ isDark }: FooterProps) {
                     isDark ? "text-white/60 hover:text-orange-400" : "text-maroon-700 hover:text-maroon-900"
                   }`}
                 >
-                  Payland Safe
+                  PayLand Safe
                 </a>
               </li>
             </ul>
@@ -247,7 +247,7 @@ export default function Footer({ isDark }: FooterProps) {
           }`}
         >
           <p className={`text-sm transition-smooth ${isDark ? "text-white/50" : "text-maroon-600"}`}>
-            © 2025 Payland. All rights reserved.
+            © 2025 PayLand. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a

@@ -131,7 +131,7 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
           <div className="lg:col-span-1">
             <div
               className={`rounded-3xl backdrop-blur-xl p-8 h-full 
-         shadow-xl shadow-orange-400 overflow-hidden`}
+         hover:transform-border-3 border-1  border-orange-400  overflow-hidden`}
             >
               <h3
                 className={`text-sm font-semibold uppercase tracking-wider mb-8 flex items-center gap-2 ${
@@ -147,12 +147,12 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                     key={idx}
                     onClick={() => setActiveFeature(idx)}
                     className={`w-full text-left px-4 py-4 rounded-2xl relative overflow-hidden
-                    ring-2 ring-orange-300 hover:ring-orange-500 ${
+                    ring-1 ring-orange-400 hover:ring-orange-500 transform-3d shadow-xl translate-x-0.5  ${
                       activeFeature === idx
                         ? isDark
-                          ? " text-black 400 hover:shadow-xl, hover:shadow-orange-500 translate-3d"
-                          : "text-white/60   shadow-2xl shadow-orange-500 translate-3d"
-                        : "text-[#5e5e5d]   shadow-2xl  group-hover:[bg-gradient-to-r from-orange-300 via-white to-orange-600]"
+                          ? " text-black 400 hover:shadow-lg, hover:shadow-orange-500 transform-3d"
+                          : "text-orange-500   hover:shadow-sm hover:shadow-orange-500 transform-3d"
+                        : "text-[#5e5e5d]   shadow-sm  hover:shadow-xl, hover:shadow-orange-500 transform-3d"
                     }`}
                   >
                     <div className="relative z-10 flex items-center gap-3">
@@ -187,7 +187,7 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                     onMouseEnter={() => setHoveredCard(idx)}
                     onMouseLeave={() => setHoveredCard(null)}
                     className={` relative rounded-2xl p-8 
-                           shadow-xs hover:-translate-y-4  shadow-orange-300 hover:shadow-orange-500  overflow-hidden
+                           shadow-xs hover:-translate-y-0.5  shadow-orange-300 hover:shadow-orange-500  overflow-hidden
                       ${
                         activeFeature === idx
                           ? "group-hover:[bg-orange-500] transform-3d "
@@ -253,7 +253,7 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                       onMouseEnter={() => setHoveredButton(idx)}
                       onMouseLeave={() => setHoveredButton(null)}
                       className={`absolute bottom-4 right-4 p-3 rounded-full 
-                        opacity-100   shadow-lg backdrop-blur-sm z-50 ${
+                        opacity-70   shadow-lg backdrop-blur-sm z-50 ${
                           isDark
                             ? "bg-orange-500 text-black ring-2 ring-white"
                             : "bg-black text-white ring-2 ring-orange-500"
@@ -296,9 +296,9 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                 </div>
                 <button
                   onClick={nextFeature}
-                  className={`p-3 rounded-full transition-all duration-300 transform hover:scale-110 ${
+                  className={`p-3 rounded-full  ${
                     isDark
-                      ? "bg-orange-100 hover:bg-orange-300 text-white/50"
+                      ? "bg-orange-500 hover:bg-black hover:ring-1 hover:ring-white text-white/50"
                       : "bg-[#fe7751]/20 hover:bg-[#fd3b02] hover:text-white text-[#000000]"
                   }`}
                 >

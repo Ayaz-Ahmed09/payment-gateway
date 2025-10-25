@@ -8,7 +8,7 @@ export default function DetailedShowcase({ isDark }: DetailedShowcaseProps) {
   const showcases = [
     {
       id: 1,
-      label: "PAYLAND POWERED",
+      label: "PayLand POWERED",
       title: "Hosted Payment Fields",
       description:
         "Our behind-the-scenes integration allowing your business to use our Credit Card Payment Fields, embedded in your existing forms. Your cashier, our payment fields.",
@@ -19,7 +19,7 @@ export default function DetailedShowcase({ isDark }: DetailedShowcaseProps) {
     {
       id: 2,
       label: "YOUR CASHIER SUPERCHARGED",
-      title: "Payland Direct",
+      title: "PayLand Direct",
       description:
         "Built for businesses with their own cashier page, connect directly with our API and expand your payment solutions and global presence with ease.",
       buttonText: "Learn More",

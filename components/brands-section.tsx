@@ -26,9 +26,7 @@ export default function BrandsSection({ isDark }: BrandsSectionProps) {
     { name: "CryptoSlate", logo: "CS" },
   ]
 
-  // Simple auto-scrolling slider logic
-  // For production, use a carousel library, but here is a minimal pure CSS/JS version
-  // The slider will loop infinitely
+  
   return (
     <section
       className={`py-20 px-4 sm:px-6 lg:px-8 border-t relative overflow-hidden transition-smooth ${
@@ -41,7 +39,7 @@ export default function BrandsSection({ isDark }: BrandsSectionProps) {
         aria-hidden="true"
       >
         {/* Top left foggy corner */}
-        <div className="absolute top-0 left-0 w-48 h-48 bg-white/10 dark:bg-white/5 rounded-full blur-2xl opacity-60" />
+        <div className={`absolute top-0 left-0 w-48 h-48 bg-gray-400/10 ${ isDark ? "bg-gray-200/10" : "bg-white/50"} rounded-full blur-2xl opacity-60`} />
         {/* Bottom right foggy corner */}
         <div className="absolute bottom-0 right-0 w-56 h-56 bg-maroon-200/30 dark:bg-white/10 rounded-full blur-3xl opacity-50" />
       </div>
@@ -55,7 +53,7 @@ export default function BrandsSection({ isDark }: BrandsSectionProps) {
         </h2>
         <div className="w-full overflow-x-hidden">
           <div
-            className="flex items-center gap-12 md:gap-16 animate-slider"
+            className="flex items-center gap-12 transform-3d md:gap-16 animate-slider"
             style={{
               width: "max-content",
               animation: "slider-scroll 40s linear infinite"
@@ -64,7 +62,7 @@ export default function BrandsSection({ isDark }: BrandsSectionProps) {
             {[...brands, ...brands].map((brand, idx) => (
               <div
                 key={brand.name + idx}
-                className="flex items-center gap-3 opacity-70 hover:opacity-100 transition-all duration-300 backdrop-blur-md bg-white/30 dark:bg-white/10 rounded-xl shadow-lg hover:scale-105 min-w-[160px]"
+                className="flex items-center gap-3 opacity-70 font-family-poppins transform-3d hover:opacity-100 transition-all duration-400 backdrop-blur-md bg-white/0 shadow-xs dark:bg-white/10 rounded-lg shadow-orange-500 hover:scale-105 min-w-[160px]"
                 style={{ boxShadow: isDark ? "0 4px 24px 0 rgba(255,255,255,0.08)" : "0 4px 24px 0 rgba(128,0,32,0.08)" }}
               >
                 <div
@@ -76,7 +74,7 @@ export default function BrandsSection({ isDark }: BrandsSectionProps) {
                   {brand.logo}
                 </div>
                 <span
-                  className={`font-medium hidden sm:inline transition-smooth ${
+                  className={`font-medium hidden font-poppins shadow-2xs shadow-orange-500 tracking-wide transform-3d translate-x-0 sm:inline transition-smooth ${
                     isDark ? "text-white/60" : "text-maroon-600"
                   }`}
                 >

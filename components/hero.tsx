@@ -49,7 +49,7 @@ export default function Hero({ isDark }: HeroProps) {
             Payment Solutions
             <br />
             <span
-              className={`bg-clip-text text-transparent font-orbitron leading-tight ${
+              className={`bg-clip-text text-transparent font-openSans leading-tight ${
                 isDark
                   ? "bg-gradient-to-r from-[#fd3b02] via-[#fe7751] to-[#fd3b02]"
                   : "bg-gradient-to-r from-[#fd3b02] via-[#fe7751] to-[#fd3b02]"
@@ -63,7 +63,7 @@ export default function Hero({ isDark }: HeroProps) {
               isDark ? "text-white/60" : "text-[#5e5e5d]"
             }`}
           >
-            Payland delivers secure, fast, and reliable payment processing
+            PayLand delivers secure, fast, and reliable payment processing
             solutions for modern businesses.
           </p>
 

@@ -26,7 +26,7 @@ const openSans = Open_Sans({
   display: "swap",
 });
 export const metadata: Metadata = {
-  title: "Payland - Modern Payment Gateway",
+  title: "PayLand - Modern Payment Gateway",
   description: "Secure, fast, and elegant payment processing",
   generator: "Next.js",
 };

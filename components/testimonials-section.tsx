@@ -21,7 +21,7 @@ const testimonials: TestimonialItem[] = [
     name: "Sarah Johnson",
     role: "CEO",
     company: "TechFlow Inc",
-    text: "Payland transformed our payment infrastructure. The integration was seamless and our transaction success rate improved by 23%.",
+    text: "PayLand transformed our payment infrastructure. The integration was seamless and our transaction success rate improved by 23%.",
     avatar: "SJ",
   },
   {
@@ -29,7 +29,7 @@ const testimonials: TestimonialItem[] = [
     name: "Michael Chen",
     role: "CTO",
     company: "Digital Ventures",
-    text: "The API documentation is exceptional. Our team was able to integrate Payland in just 2 days. Highly recommended!",
+    text: "The API documentation is exceptional. Our team was able to integrate PayLand in just 2 days. Highly recommended!",
     avatar: "MC",
   },
   {
@@ -37,7 +37,7 @@ const testimonials: TestimonialItem[] = [
     name: "Emma Rodriguez",
     role: "Founder",
     company: "Global Commerce",
-    text: "Outstanding customer support and reliability. Payland handles our high-volume transactions with zero downtime.",
+    text: "Outstanding customer support and reliability. PayLand handles our high-volume transactions with zero downtime.",
     avatar: "ER",
   },
   {
@@ -45,7 +45,7 @@ const testimonials: TestimonialItem[] = [
     name: "David Park",
     role: "Product Manager",
     company: "NextGen Payments",
-    text: "The security features are top-notch. Our customers feel confident knowing their data is protected with Payland.",
+    text: "The security features are top-notch. Our customers feel confident knowing their data is protected with PayLand.",
     avatar: "DP",
   },
   {
@@ -53,7 +53,7 @@ const testimonials: TestimonialItem[] = [
     name: "Lisa Anderson",
     role: "Operations Lead",
     company: "Swift Transactions",
-    text: "Best decision we made for our business. Payland's analytics dashboard gives us real-time insights into our payments.",
+    text: "Best decision we made for our business. PayLand's analytics dashboard gives us real-time insights into our payments.",
     avatar: "LA",
   },
   {
@@ -61,7 +61,7 @@ const testimonials: TestimonialItem[] = [
     name: "James Wilson",
     role: "Finance Director",
     company: "Enterprise Solutions",
-    text: "Payland's pricing is transparent and competitive. We've reduced our payment processing costs significantly.",
+    text: "PayLand's pricing is transparent and competitive. We've reduced our payment processing costs significantly.",
     avatar: "JW",
   },
 ]
@@ -102,7 +102,7 @@ export default function TestimonialsSection({ isDark }: TestimonialsSectionProps
             </span>
           </h2>
           <p className={`text-lg max-w-2xl mx-auto transition-smooth ${isDark ? "text-white/60" : "text-maroon-700"}`}>
-            See what our customers have to say about Payland
+            See what our customers have to say about PayLand
           </p>
         </div>
 

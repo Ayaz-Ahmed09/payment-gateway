@@ -14,20 +14,20 @@ export default function ProductsSection({ isDark }: ProductsSectionProps) {
     {
       id: 1,
       label: "OUR FLAGSHIP PRODUCT",
-      title: "Payland Pro",
+      title: "PayLand Pro",
       description: "Complete payment solution",
       image: "💳",
     },
     {
       id: 2,
       label: "SUPERCHARGED PAYMENTS",
-      title: "Payland Direct",
+      title: "PayLand Direct",
       description: "API-first payment platform",
       image: "⚡",
     },
     {
       id: 3,
-      label: "PAYLAND POWERED",
+      label: "PayLand POWERED",
       title: "Hosted Fields",
       description: "Secure payment forms",
       image: "🔒",
@@ -35,7 +35,7 @@ export default function ProductsSection({ isDark }: ProductsSectionProps) {
     {
       id: 4,
       label: "ENTERPRISE SECURITY",
-      title: "Payland Safe",
+      title: "PayLand Safe",
       description: "Enterprise security",
       image: "🛡️",
     },
