@@ -150,7 +150,7 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
                     ring-2 ring-orange-300 hover:ring-orange-500 ${
                       activeFeature === idx
                         ? isDark
-                          ? " text-white shadow-xs shadow-orange 400 group-hover:[shadow-xl, shadow-orange-500] translate-3d"
+                          ? " text-black 400 hover:shadow-xl, hover:shadow-orange-500 translate-3d"
                           : "text-white/60   shadow-2xl shadow-orange-500 translate-3d"
                         : "text-[#5e5e5d]   shadow-2xl  group-hover:[bg-gradient-to-r from-orange-300 via-white to-orange-600]"
                     }`}
