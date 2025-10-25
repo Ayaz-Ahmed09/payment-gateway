@@ -1,7 +1,7 @@
 "use client"
 
-import { Mail, Linkedin, Twitter } from "lucide-react"
-
+import { Mail, Linkedin, Twitter} from "lucide-react"
+import Image from "next/image"
 interface FooterProps {
   isDark: boolean
 }
@@ -18,20 +18,12 @@ export default function Footer({ isDark }: FooterProps) {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div
-                className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold transition-smooth ${
-                  isDark
-                    ? "bg-gradient-to-br from-orange-400 to-orange-600 text-white"
-                    : "bg-gradient-to-br from-maroon-600 to-maroon-800 text-white"
-                }`}
-              >
-                P
-              </div>
+             <Image src={isDark ? "/logo12.png" : "/logo1.png"} alt="Payland Logo" width={40} height={40} />
               <span className={`font-bold text-lg transition-smooth ${isDark ? "text-white" : "text-maroon-900"}`}>
-                Payland
+                <span className="text-orange-500">Pay</span>land
               </span>
             </div>
-            <p className={`text-sm leading-relaxed transition-smooth ${isDark ? "text-white/60" : "text-maroon-700"}`}>
+            <p className={`text-sm leading-relaxed justify-center transition-smooth ${isDark ? "text-white/60" : "text-maroon-700"}`}>
               Modern payment gateway for the future of commerce
             </p>
           </div>

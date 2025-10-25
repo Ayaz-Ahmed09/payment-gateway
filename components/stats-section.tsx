@@ -25,7 +25,7 @@ const countryData = [
 const statsCards = [
   {
     icon: <Users className="w-8 h-8" />,
-    value: "204K+",
+    value: "2.5M+",
     label: "Active Users",
   },
   {
@@ -35,7 +35,7 @@ const statsCards = [
   },
   {
     icon: <Wallet className="w-8 h-8" />,
-    value: "$2.5B+",
+    value: "$25",
     label: "Transactions",
   },
 ]
@@ -135,9 +135,9 @@ export default function StatsSection({ isDark }: StatsSectionProps) {
               <BarChart 
                 data={countryData} 
                 margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
-                onMouseMove={(e) => {
+                onMouseMove={(e: any) => {
                   if (e.activeTooltip) {
-                    setHoveredCountry(e.activeTooltip.payload.country)
+                    setHoveredCountry(e.activePayload?.[0]?.payload?.country)
                   }
                 }}
                 onMouseLeave={() => setHoveredCountry(null)}

@@ -41,6 +41,13 @@ export default function RootLayout({
       <body
         className={`${poppins.className} ${orbitron.variable} ${poppins.variable} ${openSans.variable} antialiased`}
       >
+        {/* Pre-hydration script: set theme before React mounts to avoid flash/mismatch */}
+        <script
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: `(()=>{try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark')}else if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){} })()`,
+          }}
+        />
         {children}
         <Analytics />
       </body>

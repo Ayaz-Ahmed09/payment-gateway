@@ -44,5 +44,8 @@
       "gitlens.hovers.currentLine.over": "line",
       "python.analysis.aiHoverSummaries": true,
       "workbench.view.alwaysShowHeaderActions": true,
-      "typescript.tsdk": "node_modules/typescript/lib"
+      "typescript.tsdk": "node_modules/typescript/lib",
+      "editor.overtypeCursorStyle": "line",
+      "terminal.integrated.cursorStyle": "line",
+      "pdf-preview.default.cursor": "hand"
 }

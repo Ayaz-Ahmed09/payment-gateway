@@ -5,7 +5,7 @@ interface CTAProps {
 export default function CTA({ isDark }: CTAProps) {
   return (
     <section
-      className={`py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden transition-smooth bg-[url('/background/2.jpeg')] bg-center bg-no-repeat backdrop-blur-2xl ${
+      className={`py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden transition-smooth bg-center bg-no-repeat backdrop-blur-2xl ${
         isDark ? "bg-black" : "bg-white"
       }`}
     >
