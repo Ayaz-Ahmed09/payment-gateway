@@ -38,7 +38,7 @@ export default function Hero({ isDark }: HeroProps) {
                 isDark ? "text-orange-400" : "text-maroon-600"
               }`}
             >
-              ✨ Next Generation Payment Processing
+              Next Generation Payment Processing
             </span>
           </div>
           <h1

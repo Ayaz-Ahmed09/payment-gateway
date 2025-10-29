@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 interface TestimonialItem {
-  id: number
-  name: string
-  role: string
-  company: string
-  text: string
-  avatar: string
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  text: string;
+  avatar: string;
 }
 
 interface TestimonialsSectionProps {
-  isDark: boolean
+  isDark: boolean;
 }
 
 const testimonials: TestimonialItem[] = [
@@ -64,17 +64,19 @@ const testimonials: TestimonialItem[] = [
     text: "PayLand's pricing is transparent and competitive. We've reduced our payment processing costs significantly.",
     avatar: "JW",
   },
-]
+];
 
-export default function TestimonialsSection({ isDark }: TestimonialsSectionProps) {
-  const [scrollPosition, setScrollPosition] = useState(0)
+export default function TestimonialsSection({
+  isDark,
+}: TestimonialsSectionProps) {
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setScrollPosition((prev) => (prev + 1) % (testimonials.length * 100))
-    }, 50)
-    return () => clearInterval(interval)
-  }, [])
+      setScrollPosition((prev) => (prev + 1) % (testimonials.length * 100));
+    }, 50);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
@@ -95,13 +97,17 @@ export default function TestimonialsSection({ isDark }: TestimonialsSectionProps
               className={`bg-clip-text text-transparent ${
                 isDark
                   ? "bg-gradient-to-r from-orange-400 to-orange-600"
-                  : "bg-gradient-to-r from-maroon-600 to-maroon-800"
+                  : "bg-gradient-to-r from-orange-400 to-orange-700"
               }`}
             >
               Industry Leaders
             </span>
           </h2>
-          <p className={`text-lg max-w-2xl mx-auto transition-smooth ${isDark ? "text-white/60" : "text-maroon-700"}`}>
+          <p
+            className={`text-lg max-w-2xl mx-auto transition-smooth ${
+              isDark ? "text-white/60" : "text-maroon-700"
+            }`}
+          >
             See what our customers have to say about PayLand
           </p>
         </div>
@@ -137,7 +143,9 @@ export default function TestimonialsSection({ isDark }: TestimonialsSectionProps
               <div
                 key={`${testimonial.id}-${index}`}
                 className={`flex-shrink-0 rounded-2xl backdrop-blur-xl p-6 shadow-lg transition-smooth ${
-                  isDark ? "bg-white/5 border border-white/10" : "bg-maroon-50/50 border border-maroon-200"
+                  isDark
+                    ? "bg-white/5 border border-white/10"
+                    : "bg-maroon-50/50 border border-maroon-200"
                 }`}
               >
                 <div className="flex items-start gap-4">
@@ -159,10 +167,18 @@ export default function TestimonialsSection({ isDark }: TestimonialsSectionProps
                       "{testimonial.text}"
                     </p>
                     <div>
-                      <p className={`font-semibold transition-smooth ${isDark ? "text-white" : "text-maroon-900"}`}>
+                      <p
+                        className={`font-semibold transition-smooth ${
+                          isDark ? "text-white" : "text-maroon-900"
+                        }`}
+                      >
                         {testimonial.name}
                       </p>
-                      <p className={`text-xs transition-smooth ${isDark ? "text-white/50" : "text-maroon-600"}`}>
+                      <p
+                        className={`text-xs transition-smooth ${
+                          isDark ? "text-white/50" : "text-maroon-600"
+                        }`}
+                      >
                         {testimonial.role} at {testimonial.company}
                       </p>
                     </div>
@@ -174,5 +190,5 @@ export default function TestimonialsSection({ isDark }: TestimonialsSectionProps
         </div>
       </div>
     </section>
-  )
+  );
 }
