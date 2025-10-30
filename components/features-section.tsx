@@ -130,8 +130,8 @@ const [hoveredButton, setHoveredButton] = useState<number | null>(null);
           {/* Enhanced Sidebar */}
           <div className="lg:col-span-1">
             <div
-              className={`rounded-3xl backdrop-blur-xl p-8 h-full 
-         hover:transform-border-3 border-1  border-orange-400  overflow-hidden`}
+              className={`rounded-3xl backdrop-blur-lg p-6 h-full 
+         hover:transform-border-2 border-1  border-orange-300 border-opacity-40 hover:border-opacity-90  overflow-hidden`}
             >
               <h3
                 className={`text-sm font-semibold uppercase tracking-wider mb-8 flex items-center gap-2 ${

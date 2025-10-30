@@ -45,8 +45,8 @@ export default function StatsSection({ isDark }: StatsSectionProps) {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null)
 
   const gradientColors = isDark 
-    ? ["#00f2fe", "#4facfe", "#0088ff"] 
-    : ["#0088ff", "#00c6fb", "#00f2fe"]
+    ? ["#fb923c", "#f97316", "#ea580c"] 
+    : ["#f97316", "#fdba74", "#fb923c"]
 
   return (
     <section className={`py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden ${
@@ -56,11 +56,11 @@ export default function StatsSection({ isDark }: StatsSectionProps) {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
         <div className={`absolute top-0 left-1/4 w-96 h-96 rounded-full 
-          ${isDark ? 'bg-blue-500/20' : 'bg-blue-400/10'} 
+          ${isDark ? 'bg-orange-500/20' : 'bg-orange-400/10'} 
           filter blur-[80px] animate-pulse-slow`} 
         />
         <div className={`absolute bottom-0 right-1/4 w-96 h-96 rounded-full 
-          ${isDark ? 'bg-cyan-500/20' : 'bg-cyan-400/10'} 
+          ${isDark ? 'bg-orange-400/20' : 'bg-orange-300/10'} 
           filter blur-[80px] animate-pulse-slow animation-delay-2000`} 
         />
       </div>
@@ -69,14 +69,14 @@ export default function StatsSection({ isDark }: StatsSectionProps) {
         {/* Header */}
         <div className="text-center mb-16">
           <TrendingUp className={`w-12 h-12 mx-auto mb-4 ${
-            isDark ? "text-blue-400" : "text-blue-600"
+            isDark ? "text-orange-400" : "text-orange-600"
           }`} />
           <h2 className={`text-5xl sm:text-6xl font-bold mb-6 ${
             isDark ? "text-white" : "text-gray-900"
           }`}>
             Global Platform
             <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-600">
               Performance
             </span>
           </h2>
@@ -100,11 +100,11 @@ export default function StatsSection({ isDark }: StatsSectionProps) {
               <div key={idx} className={`rounded-2xl p-6 transition-all duration-300
                 group hover:-translate-y-1 ${
                 isDark 
-                  ? "bg-gradient-to-br from-gray-800/50 to-gray-900/50 hover:from-blue-900/20 hover:to-cyan-900/20 border border-white/10" 
-                  : "bg-white hover:bg-gradient-to-br hover:from-blue-50 hover:to-cyan-50 border border-gray-200"
+                  ? "bg-gradient-to-br from-gray-800/50 to-gray-900/50 hover:from-orange-900/20 hover:to-orange-800/20 border border-white/10" 
+                  : "bg-white hover:bg-gradient-to-br hover:from-orange-50 hover:to-orange-100 border border-gray-200"
               }`}>
                 <div className={`${
-                  isDark ? "text-blue-400 group-hover:text-blue-300" : "text-blue-600 group-hover:text-blue-500"
+                  isDark ? "text-orange-400 group-hover:text-orange-300" : "text-orange-600 group-hover:text-orange-500"
                 }`}>
                   {stat.icon}
                 </div>
@@ -127,7 +127,7 @@ export default function StatsSection({ isDark }: StatsSectionProps) {
             <h3 className={`text-2xl font-bold mb-8 flex items-center gap-3 ${
               isDark ? "text-white" : "text-gray-900"
             }`}>
-              <CreditCard className={isDark ? "text-blue-400" : "text-blue-600"} />
+              <CreditCard className={isDark ? "text-orange-400" : "text-orange-600"} />
               Global Transaction Analytics
             </h3>
             
@@ -177,7 +177,7 @@ export default function StatsSection({ isDark }: StatsSectionProps) {
                 <Tooltip
                   contentStyle={{
                     backgroundColor: isDark ? "rgba(0,0,0,0.95)" : "rgba(255,255,255,0.95)",
-                    border: isDark ? "1px solid rgba(59,130,246,0.5)" : "1px solid rgba(0,136,255,0.5)",
+                    border: isDark ? "1px solid rgba(249,115,22,0.5)" : "1px solid rgba(234,88,12,0.5)",
                     borderRadius: "16px",
                     boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
                     padding: "16px",

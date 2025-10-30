@@ -12,7 +12,7 @@ export default function Footer({ isDark }: FooterProps) {
       className={`border-t py-20 px-4 sm:px-6 lg:px-8 transition-smooth ${
         isDark
           ? "border-white/10 bg-black/40"
-          : "border-maroon-200 bg-maroon-50/40"
+          : "border-orange-200 bg-orange-50/40"
       }`}
     >
       <div className="max-w-7xl mx-auto">
@@ -28,7 +28,7 @@ export default function Footer({ isDark }: FooterProps) {
               />
               <span
                 className={`font-bold text-lg transition-smooth ${
-                  isDark ? "text-white" : "text-maroon-900"
+                  isDark ? "text-white" : "text-orange-900"
                 }`}
               >
                 <span className="text-orange-500 hover:text-white">Pay</span>Land
@@ -36,7 +36,7 @@ export default function Footer({ isDark }: FooterProps) {
             </div>
             <p
               className={`text-sm leading-relaxed justify-center text center transition-smooth ${
-                isDark ? "text-white/60" : "text-maroon-700"
+                isDark ? "text-white/60" : "text-orange-700"
               }`}
             >
               Modern payment gateway for the future of commerce
@@ -47,7 +47,7 @@ export default function Footer({ isDark }: FooterProps) {
           <div>
             <h4
               className={`font-semibold mb-6 text-sm uppercase tracking-wider transition-smooth ${
-                isDark ? "text-white" : "text-maroon-900"
+                isDark ? "text-white" : "text-orange-900"
               }`}
             >
               Products
@@ -59,7 +59,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   PayLand Pro
@@ -71,7 +71,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Direct
@@ -83,7 +83,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Hosted Fields
@@ -95,7 +95,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   PayLand Safe
@@ -108,7 +108,7 @@ export default function Footer({ isDark }: FooterProps) {
           <div>
             <h4
               className={`font-semibold mb-6 text-sm uppercase tracking-wider transition-smooth ${
-                isDark ? "text-white" : "text-maroon-900"
+                isDark ? "text-white" : "text-orange-900"
               }`}
             >
               Company
@@ -120,7 +120,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   About
@@ -132,7 +132,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Blog
@@ -144,7 +144,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Careers
@@ -156,7 +156,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Contact
@@ -169,7 +169,7 @@ export default function Footer({ isDark }: FooterProps) {
           <div>
             <h4
               className={`font-semibold mb-6 text-sm uppercase tracking-wider transition-smooth ${
-                isDark ? "text-white" : "text-maroon-900"
+                isDark ? "text-white" : "text-orange-900"
               }`}
             >
               Developers
@@ -181,7 +181,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Documentation
@@ -193,7 +193,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   API Reference
@@ -205,7 +205,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   SDKs
@@ -217,7 +217,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Support
@@ -242,7 +242,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-orange-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Privacy
@@ -254,7 +254,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-maroon-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Terms
@@ -266,7 +266,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-orange-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Compliance
@@ -278,7 +278,7 @@ export default function Footer({ isDark }: FooterProps) {
                   className={`transition-smooth ${
                     isDark
                       ? "text-white/60 hover:text-orange-400"
-                      : "text-maroon-700 hover:text-orange-900"
+                      : "text-orange-700 hover:text-orange-900"
                   }`}
                 >
                   Cookies
@@ -311,7 +311,7 @@ export default function Footer({ isDark }: FooterProps) {
                 className={`w-5 h-5 transition-smooth ${
                   isDark
                     ? "text-white/60 group-hover:text-orange-400"
-                    : "text-maroon-700 group-hover:text-maroon-900"
+                    : "text-orange-700 group-hover:text-orange-900"
                 }`}
               />
             </a>
@@ -325,19 +325,19 @@ export default function Footer({ isDark }: FooterProps) {
                 className={`w-5 h-5 transition-smooth ${
                   isDark
                     ? "text-white/60 group-hover:text-orange-400"
-                    : "text-maroon-700 group-hover:text-maroon-900"
+                    : "text-orange-700 group-hover:text-orange-900"
                 }`}
               />
             </a>
             {/* <a
               href="#"
               className={`p-2 rounded-lg transition-smooth group ${
-                isDark ? "hover:bg-white/10" : "hover:bg-maroon-100"
+                isDark ? "hover:bg-white/10" : "hover:bg-orange-100"
               }`}
             >
               <Linkedin
                 className={`w-5 h-5 transition-smooth ${
-                  isDark ? "text-white/60 group-hover:text-orange-400" : "text-maroon-700 group-hover:text-maroon-900"
+                  isDark ? "text-white/60 group-hover:text-orange-400" : "text-orange-700 group-hover:text-orange-900"
                 }`}
               />
             </a> */}

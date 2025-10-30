@@ -74,15 +74,15 @@ export default function ProductsSection({ isDark }: ProductsSectionProps) {
               className={`group relative rounded-3xl backdrop-blur-xl p-8 sm:p-12 overflow-hidden 
     transition-all duration-300 cursor-pointer transform hover:-translate-y-2 ${
       isDark
-        ? "bg-white/5 border border-white/10 hover:border-orange-500/50 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
-        : "bg-maroon-50 border border-maroon-200 hover:border-maroon-600 hover:bg-maroon-100 hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)]"
+        ? "bg-white/5 border border-white/10 hover:border-orange-500/50 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(249,115,22,0.6)] hover:ring-2 hover:ring-orange-500/20"
+        : "bg-maroon-50 border border-maroon-200 hover:border-orange-500 hover:bg-orange-100 hover:shadow-[0_0_40px_rgba(249,115,22,0.45)] hover:ring-2 hover:ring-orange-500/30"
     }`}
             >
               <div
                 className={`absolute inset-0 transition-all duration-300 ${
                   isDark
-                    ? "bg-gradient-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:to-blue-500/20"
-                    : "bg-gradient-to-br from-maroon-500/0 to-maroon-500/0 group-hover:from-maroon-500/5 group-hover:to-maroon-500/10"
+                    ? "bg-gradient-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/15 group-hover:to-orange-500/25"
+                    : "bg-gradient-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/8 group-hover:to-orange-500/15"
                 }`}
               ></div>
 
@@ -115,7 +115,7 @@ export default function ProductsSection({ isDark }: ProductsSectionProps) {
                     className={`p-3 rounded-full transition-all duration-300 group-hover:translate-x-1 ${
                       isDark
                         ? "bg-white/10 border border-white/20 text-white hover:bg-orange-500 hover:border-orange-500"
-                        : "bg-maroon-100 border border-maroon-300 text-maroon-900 hover:bg-maroon-600 hover:border-maroon-600 hover:text-white"
+                        : "bg-maroon-100 border border-maroon-300 text-maroon-900 hover:bg-orange-500 hover:border-orange-500 hover:text-white"
                     }`}
                   >
                     <ArrowRight className="w-5 h-5" />

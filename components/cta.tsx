@@ -13,14 +13,14 @@
 //         className={`absolute inset-0 bg-gradient-to-r transition-smooth ${
 //           isDark
 //             ? "from-orange-500/10 via-transparent to-orange-500/10"
-//             : "from-maroon-400/10 via-transparent to-maroon-400/10"
+//             : "from-orange-400/10 via-transparent to-orange-400/10"
 //         }`}
 //       ></div>
 
 //       <div className="max-w-4xl mx-auto relative z-10 text-center">
 //         <h2
 //           className={`text-5xl sm:text-6xl font-bold mb-6 transition-smooth ${
-//             isDark ? "text-white" : "text-[#800000]"
+//             isDark ? "text-white" : "text-orange-500"
 //           }`}
 //         >
 //           Get in touch
@@ -38,7 +38,7 @@
 //           className={`px-8 py-4 font-semibold rounded-full transition-smooth border ${
 //             isDark
 //               ? "bg-black text-white border-white/10 hover:bg-black/80 hover:border-white/20"
-//               : "bg-[#800000] text-white border-maroon-700 hover:bg-maroon-700 hover:border-maroon-800"
+//               : "bg-orange-500 text-white border-orange-700 hover:bg-orange-700 hover:border-orange-800"
 //           }`}
 //         >
 //           <a href="mailto:info@payland.info">Get a Demo</a>
@@ -68,7 +68,7 @@ export default function CTA({ isDark }: CTAProps) {
         className={`absolute inset-0 bg-gradient-to-r transition-smooth ${
           isDark
             ? "from-orange-500/10 via-transparent to-orange-500/10"
-            : "from-[#800000]/10 via-transparent to-[#800000]/10"
+            : "from-orange-600/10 via-transparent to-orange-400/10"
         }`}
       ></div>
 
@@ -77,7 +77,7 @@ export default function CTA({ isDark }: CTAProps) {
         <div className="text-center mb-16">
           <h2
             className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 transition-smooth ${
-              isDark ? "text-white" : "text-[#800000]"
+              isDark ? "text-white" : "text-orange-500"
             }`}
           >
             Get in touch
@@ -95,7 +95,7 @@ export default function CTA({ isDark }: CTAProps) {
             className={`px-8 py-4 font-semibold rounded-full transition-all duration-300 border ${
               isDark
                 ? "bg-black text-white border-white/20 hover:bg-white/10 hover:border-white/40 hover:shadow-lg hover:shadow-orange-500/20"
-                : "bg-[#800000] text-white border-[#800000] hover:bg-[#600000] hover:border-[#600000] hover:shadow-lg hover:shadow-[#800000]/30"
+                : "bg-orange-500 text-white border-orange-500 hover:bg-orange-200 hover:border-orange-300 hover:shadow-lg hover:shadow-orange-500/30"
             }`}
           >
             <a href="mailto:info@payland.info">Get a Demo</a>
@@ -109,17 +109,17 @@ export default function CTA({ isDark }: CTAProps) {
             className={`p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 ${
               isDark
                 ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-orange-500/30"
-                : "bg-[#800000]/5 border-[#800000]/20 hover:bg-[#800000]/10 hover:border-[#800000]/40"
+                : "bg-orange-500/5 border-orange-500/20 hover:bg-orange-500/10 hover:border-orange-500/40"
             }`}
           >
             <div className="flex flex-col items-center text-center">
               <div
                 className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-smooth ${
-                  isDark ? "bg-orange-500/20" : "bg-[#800000]/20"
+                  isDark ? "bg-orange-500/20" : "bg-orange-500/20"
                 }`}
               >
                 <svg
-                  className={`w-6 h-6 ${isDark ? "text-orange-500" : "text-[#800000]"}`}
+                  className={`w-6 h-6 ${isDark ? "text-orange-500" : "text-orange-500"}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -142,7 +142,7 @@ export default function CTA({ isDark }: CTAProps) {
               <a
                 href="mailto:info@payland.info"
                 className={`text-base font-medium mb-1 hover:underline transition-smooth ${
-                  isDark ? "text-white" : "text-[#800000]"
+                  isDark ? "text-white" : "text-orange-500"
                 }`}
               >
                 info@payland.info
@@ -150,7 +150,7 @@ export default function CTA({ isDark }: CTAProps) {
               <a
                 href="mailto:payment@payland.info"
                 className={`text-base font-medium hover:underline transition-smooth ${
-                  isDark ? "text-white" : "text-[#800000]"
+                  isDark ? "text-white" : "text-orange-500"
                 }`}
               >
                 payment@payland.info
@@ -163,17 +163,17 @@ export default function CTA({ isDark }: CTAProps) {
             className={`p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 ${
               isDark
                 ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-orange-500/30"
-                : "bg-[#800000]/5 border-[#800000]/20 hover:bg-[#800000]/10 hover:border-[#800000]/40"
+                : "bg-orange-500/5 border-orange-500/20 hover:bg-orange-500/10 hover:border-orange-500/40"
             }`}
           >
             <div className="flex flex-col items-center text-center">
               <div
                 className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-smooth ${
-                  isDark ? "bg-orange-500/20" : "bg-[#800000]/20"
+                  isDark ? "bg-orange-500/20" : "bg-orange-500/20"
                 }`}
               >
                 <svg
-                  className={`w-6 h-6 ${isDark ? "text-orange-500" : "text-[#800000]"}`}
+                  className={`w-6 h-6 ${isDark ? "text-orange-500" : "text-orange-500"}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -201,7 +201,7 @@ export default function CTA({ isDark }: CTAProps) {
               </h3>
               <p
                 className={`text-base font-medium leading-relaxed transition-smooth ${
-                  isDark ? "text-white" : "text-[#800000]"
+                  isDark ? "text-white" : "text-orange-500"
                 }`}
               >
                 PayLand Gateway Ltd
@@ -220,17 +220,17 @@ export default function CTA({ isDark }: CTAProps) {
             className={`p-6 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 ${
               isDark
                 ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-orange-500/30"
-                : "bg-[#800000]/5 border-[#800000]/20 hover:bg-[#800000]/10 hover:border-[#800000]/40"
+                : "bg-orange-500/5 border-orange-500/20 hover:bg-orange-500/10 hover:border-orange-500/40"
             }`}
           >
             <div className="flex flex-col items-center text-center">
               <div
                 className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-smooth ${
-                  isDark ? "bg-orange-500/20" : "bg-[#800000]/20"
+                  isDark ? "bg-orange-500/20" : "bg-orange-500/20"
                 }`}
               >
                 <svg
-                  className={`w-6 h-6 ${isDark ? "text-orange-500" : "text-[#800000]"}`}
+                  className={`w-6 h-6 ${isDark ? "text-orange-500" : "text-orange-500"}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -252,14 +252,14 @@ export default function CTA({ isDark }: CTAProps) {
               </h3>
               <div
                 className={`text-base font-medium mb-1 font-mono transition-smooth ${
-                  isDark ? "text-white" : "text-[#800000]"
+                  isDark ? "text-white" : "text-orange-500"
                 }`}
               >
                 51.5142° N
               </div>
               <div
                 className={`text-base font-medium font-mono transition-smooth ${
-                  isDark ? "text-white" : "text-[#800000]"
+                  isDark ? "text-white" : "text-orange-500"
                 }`}
               >
                 0.1224° W
@@ -269,7 +269,7 @@ export default function CTA({ isDark }: CTAProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`mt-3 text-sm underline hover:no-underline transition-smooth ${
-                  isDark ? "text-orange-500" : "text-[#800000]"
+                  isDark ? "text-orange-500" : "text-orange-500"
                 }`}
               >
                 View on Map →
