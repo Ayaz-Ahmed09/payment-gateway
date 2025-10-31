@@ -55,7 +55,7 @@ export default function DetailedShowcase({ isDark }: DetailedShowcaseProps) {
               }`}
             >
               <div
-                className={`absolute inset-1 z-30 bg-gradient-to-br ${showcase.accentColor} rounded-md`}
+                className={`absolute inset-1 z-30 group-hover:bg-gradient-to-br ${showcase.accentColor} rounded-md`}
               ></div>
 
               <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between">
