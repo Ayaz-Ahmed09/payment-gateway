@@ -2,6 +2,7 @@
 
 import { Mail, Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 interface FooterProps {
   isDark: boolean;
 }
@@ -343,7 +344,12 @@ export default function Footer({ isDark }: FooterProps) {
             </a> */}
           </div>
         </div>
+        <div className="mt-4 flex justify-center">
+          <p className="text-orange-500 text-[8px]">Developed by <Link href="https://topad.site"><span className="text-orange-600 text-[8px]" >Ayaz-Ahmad</span></Link></p>
+
+        </div>
       </div>
+
     </footer>
   );
 }

@@ -72,7 +72,7 @@ export default function Hero({ isDark }: HeroProps) {
               className={`px-8 py-4 font-semibold rounded-full transition-smooth flex items-center justify-center gap-2 group shadow-lg font-opensans ${
                 isDark
                   ? "bg-gradient-to-r from-[#fd3b02] to-[#fe7751]  hover:from-[#fe7751] hover:to-[#fd3b02] text-white hover:shadow-[#fd3b02]/50"
-                  : "bg-gradient-to-r from-[#fd3b02] via-gray-200 to-[#fe7751] ring-1 border-radius-[50px 0px 50px 0px] hover:from-[#fe7751] hover:to-[#fd3b02] text-black hover:shadow-[#fd3b02]/50"
+                  : "bg-gradient-to-r from-[#fd3b02] via-gray-200 to-[#fe7751] ring-1 ring-white border-radius-[50px 0px 50px 0px] hover:from-[#fe7751] hover:to-[#fd3b02] text-black hover:shadow-[#fd3b02]/50"
               }`}
             >
               Get Started

@@ -20,8 +20,8 @@ export default function DetailedShowcase({ isDark }: DetailedShowcaseProps) {
       buttonText: "Learn More",
       icon: mobile,
       accentColor: isDark
-        ? "from-orange-600/60 to-orange-400/40"
-        : "from-orange-300 to-orange-600",
+        ? "from-orange-500/20 to-orange-600/20"
+        : "from-orange-300/20 to-orange-400/20",
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ export default function DetailedShowcase({ isDark }: DetailedShowcaseProps) {
       icon: laptop,
       accentColor: isDark
         ? "from-orange-500/20 to-orange-600/20"
-        : "from-orange-300/20 to-orange-400/20",
+        : "from-orange-300/20 to-orange-600/20",
     },
   ];
 
@@ -50,12 +50,12 @@ export default function DetailedShowcase({ isDark }: DetailedShowcaseProps) {
               key={showcase.id}
               className={`group relative rounded-3xl backdrop-blur-xl overflow-hidden transition-all duration-300 ${
                 isDark
-                  ? "bg-white/5 border border-white/10 hover:border-orange-500/50"
-                  : "bg-orange-100 border border-orange-400 hover:border-orange-600"
+                  ? "bg-white/5 border border-white/10 hover:border-orange-500"
+                  : "bg-transparent/20 border border-orange-400 hover:border-orange-600"
               }`}
             >
               <div
-                className={`absolute inset-1 z-30 group-hover:bg-gradient-to-br ${showcase.accentColor} rounded-md`}
+                className={`absolute inset-0 z-30 group-hover:bg-gradient-to-br ${showcase.accentColor} rounded-md`}
               ></div>
 
               <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between">
